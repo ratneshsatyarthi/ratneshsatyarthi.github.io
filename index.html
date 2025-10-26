@@ -1,657 +1,920 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <title>Ratnesh Kumar Satyarthi Portfolio</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    
-    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+<html lang="zxx">
 
-    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
-    <link rel="stylesheet" href="css/animate.css">
-    
-    <link rel="stylesheet" href="css/owl.carousel.min.css">
-    <link rel="stylesheet" href="css/owl.theme.default.min.css">
-    <link rel="stylesheet" href="css/magnific-popup.css">
+<head>
+  <meta charset="utf-8">
+  <title>Portfolio Template</title>
 
-    <link rel="stylesheet" href="css/aos.css">
-
-    <link rel="stylesheet" href="css/ionicons.min.css">
-    
-    <link rel="stylesheet" href="css/flaticon.css">
-    <link rel="stylesheet" href="css/icomoon.css">
-    <link rel="stylesheet" href="css/style.css">
-
-
-
-<style>
-
-/*======================================
-//--//-->   ABOUT
-======================================*/
-
-.about-mf .box-shadow-full {
-  padding-top: 4rem;
-  padding-bottom: 4rem;
-}
-
-.about-mf .about-img {
-  margin-bottom: 2rem;
-}
-
-.about-mf .about-img img {
-  margin-left: 10px;
-}
-
-
-.skill-mf .progress {
-  /* background-color: #cde1f8; */
-  margin: .5rem 0 1.2rem 0;
-  border-radius: 0;
-  height: .7rem;
-}
-
-.skill-mf .progress .progress-bar {
-  height: .7rem;
-  background-color: #ffbd39;
-}
-
-
-/* Animation styles */
-#typing-animation {
-  position: relative;
-  font-size: 30px;
-  font-weight: bold;
-  color: rgb(255, 255, 255);
-  overflow: hidden;
-  white-space: nowrap;
-  animation: typing 3s steps(20, end) infinite;
-}
-
-#typing-animation:before {
-  content: "";
-  /* position: absolute; */
-  top: 0;
-  left: 0;
-  width: 0;
-  height: 100%;
-  background-color: #ccc;
-  animation: typing-cursor 0.5s ease-in-out infinite;
-}
-
-@keyframes typing {
-  from {
-    width: 0;
-  }
-  to {
-    width: 100%;
-  }
-}
-
-@keyframes typing-cursor {
-  from {
-    width: 5px;
-  }
-  to {
-    width: 0;
-  }
-}
-
-
-/* project image zoom effect */
-
-.zoom-effect {
-  overflow: hidden;
-  transition: transform 0.3s ease-out;
-}
-
-.zoom-effect:hover {
-  transform: scale(1.1);
-}
-
-
-</style>
-
-
-  </head>
-  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
-	  
-	  
-    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
-	    <div class="container">
-	      <a class="navbar-brand" href="index.html">Ratnesh Kumar Satyarthi</a>
-	      <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-	        <span class="oi oi-menu"></span> Menu
-	      </button>
-
-	      <div class="collapse navbar-collapse" id="ftco-nav">
-	        <ul class="navbar-nav nav ml-auto">
-	          <li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
-	          <li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
-	          <li class="nav-item"><a href="#resume-section" class="nav-link"><span>Resume</span></a></li>
-	          <li class="nav-item"><a href="#project-section" class="nav-link"><span>Projects</span></a></li>
-	          <li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
-	        </ul>
-	      </div>
-	    </div>
-	  </nav>
-	  <section id="home-section" class="hero">
-		  <div class="home-slider  owl-carousel">
-	       <div class="slider-item ">
-	      	<div class="overlay"></div>
-	         <div class="container">
-	          <div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end" data-scrollax-parent="true">
-	          	<div class="one-third js-fullheight order-md-last img" style="background-image:url(images/bg_1.png);">
-	          	 <div class="overlay"></div>
-	          	</div>
-		          <div class="one-forth d-flex  align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
-		          	<div class="text">
-		          		<span class="subheading">Hello!</span>
-			            <h1 class="mb-4 mt-3">I'm <span>Ratnesh Kumar Satyarthi</span></h1>
-
-						<!-- Element to contain animated typing -->
-						<span id="typing-animation"></span>
-
-						<script>
-
-						// Initialize the typing animation
-						const typingAnimationElement = document.getElementById('typing-animation');
-
-						// Create an array of typing text
-						const typingTexts = [
-						'Aspiring Data Analyst  ',
-						'Experienced Software Tester  ',
-						'Financial Market Learner   ',
-						];
-
-						// Create a function to display the typing animation for a given text
-						function playTypingAnimation(text) {
-						// Loop through each character and add it to the element
-						for (let i = 0; i < text.length; i++) {
-							setTimeout(() => {
-							typingAnimationElement.textContent += text[i];
-							}, i * 200); // Increase the delay to slow down the typing animation
-						}
-
-						// Once the animation is complete, reset the text and start over
-						setTimeout(() => {
-							typingAnimationElement.textContent = '';
-							playTypingAnimation(typingTexts[(typingTexts.indexOf(text) + 1) % typingTexts.length]);
-						}, text.length * 200);
-						}
-
-						// Start the typing animation loop
-						playTypingAnimation(typingTexts[0]);
-
-						</script>
-
-						<br>
-						<br>
-			            <h2>Data Analyst</h2>
-						<!-- <h2 class="d-flex" style="margin-bottom: 0">With over 5 years of experience</h2> -->
-						<!-- <br> -->
-			            <p><a href="https://www.linkedin.com/in/ratnesh-satyarthi-1332b447/" class="btn btn-primary py-3 px-4">LinkedIn</a>
-							<!-- <li class="ftco-animate normal-txt">Connect me on  </li>
-							<a href="www.linkedin.com/in/ratnesh-satyarthi-1332b447"><span class="icon-linkedin"></span></a></li>    -->
-							<a href="https://drive.google.com/drive/folders/1O6WfWJvn951JlQHgpNrBsaxlUDMhQS-r?usp=drive_link" class="btn btn-white btn-outline-white py-3 px-4">My works</a>
-							<a href="https://drive.google.com/file/d/1XUP9F4CsjZi34kPIxuXaPbky_oyCDwwS/view?usp=drive_link" class="btn btn-primary py-3 px-4">Download CV</a>
-						</p>
-		            </div>
-		          </div>
-	        	</div>
-	        </div>
-	      </div>
-		</div>
-    </section>
-
-
-
-    <section class="ftco-about img ftco-section ftco-no-pb" id="about-section">
-    	<div class="container">
-			<div class="row">
-				<div class="row d-flex align-items-stretch">
-				<!-- <div class="row d-flex"> -->
-					<div class="col-md-6 col-lg-5 d-flex">
-						<div class="img-about img d-flex align-items-stretch">
-							<div class="overlay">
-								<div class="row">
-									<div class="col-sm-6 col-md-5">
-									  <div class="about-img">
-										<img src="images/about-me.png" class="img-fluid rounded b-shadow-a" alt="">
-									  </div>
-									</div>
-									<!-- Details next to profile image -->
-									<div class="col-sm-6 col-md-7">
-									  <div class="about-info">
-										<p><span class="title-s">Name: </span> <span>Ratnesh Kumar Satyarthi</span></p>
-										<p><span class="title-s">Job Role: </span> <span>Test Lead</span></p>
-										<p><span class="title-s">Experience: </span> <span>11 Years 10 Months</span></p>
-										<p><span class="title-s">Address: </span> <span>Delhi, India</span></p>
-									  </div>
-									</div>
-								  </div>
-
-								<div class="skill-mf">
-									<p class="title-s">Skills</p>
-									<span>POWER BI</span> <span class="pull-right">90%</span>
-									<div class="progress">
-										<div class="progress-bar" role="progressbar" style="width: 90%;" aria-valuenow="90" aria-valuemin="0"
-											aria-valuemax="100"></div>
-									</div>
-									
-									<span>SQL</span> <span class="pull-right">80%</span>
-									<div class="progress">
-										<div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0"
-											aria-valuemax="100"></div>
-									</div>
-									
-									<span>PYTHON</span> <span class="pull-right">70%</span>
-									<div class="progress">
-										<div class="progress-bar" role="progressbar" style="width: 70%" aria-valuenow="70" aria-valuemin="0"
-											aria-valuemax="100"></div>
-									</div>
-									
-									<span>Dashboards</span> <span class="pull-right">95%</span>
-									<div class="progress">
-										<div class="progress-bar" role="progressbar" style="width: 95%" aria-valuenow="95" aria-valuemin="0"
-											aria-valuemax="100"></div>
-									</div>
-									
-									<span>Machine Learning</span> <span class="pull-right">70%</span>
-									<div class="progress">
-										<div class="progress-bar" role="progressbar" style="width: 70%" aria-valuenow="70" aria-valuemin="0"
-											aria-valuemax="100"></div>
-									</div> 
-								</div>
-							</div>
-						</div>
-					</div>
-					
-					<div class="col-md-6 col-lg-7 pl-lg-5 pb-5">
-						<div class="row justify-content-start pb-3">
-							<div class="col-md-12 heading-section ftco-animate">
-								
-								<h1 class="big">About</h1>
-								<h2 class="mb-4">About Me</h2>
-								
-								<p>With over 11 years of comprehensive experience in the field of software testing with a intrest in data science & analytics, accompanied by a bachelor's degree in engineering. 
-									Proficient in data analysis, statistical analysis, hypothesis testing, customer behaviour analysis, &amp; machine learning. 
-									Demonstrated success in leading impactful projects and providing effective mentorship.</p>
-								<ul class="about-info mt-4 px-md-0 px-2">
-									<!-- <li class="d-flex"><span>Profile:</span> <span>Data Science &amp; Analytics</span></li> -->
-									<li class="d-flex"><span>Profile:</span> <span>Data Analyst</span></li>
-									<li class="d-flex"><span>Domain:</span> <span>Public Finance  &amp; BFSI</span></li>
-									<li class="d-flex"><span>Education:</span> <span>Bachelor of Technology</span></li>
-									<li class="d-flex"><span>Language:</span> <span>English, Hindi</span></li>
-									<li class="d-flex"><span>BI Tools:</span> <span>Microsoft Power BI</span></li>
-									<li class="d-flex"><span>Other Skills:</span> <span>Cloud, Excel,  JIRA, Docker  &amp; Kubernetes  </span></li>
-									<!-- <li class="d-flex"><span>Interest:</span> <span>Traveling, Travel Photography, Teaching</span></li> -->
-									
-								</ul>
-							</div>
-						</div>
-
-
-						<div class="counter-wrap ftco-animate d-flex mt-md-3">
-							<div class="text">
-								<p class="mb-4">
-									<span class="number" data-number="5">0</span> <span>+</span>
-									<span>&nbsp; Projects completed</span>
-								</p>
-								<!-- <p><a href="https://docs.google.com/document/d/1b-ocshTxuw1GpYB946TAI1rzx7H-PC5tc6e9b8K58gM/edit#heading=h.4bzuibghxca5" class="btn btn-primary py-3 px-3">Download CV</a></p> -->
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-    </section>
-
-
-
-	
-    <section class="ftco-section ftco-no-pb" id="resume-section">
-    	<div class="container">
-    		<div class="row justify-content-center pb-5">
-          <div class="col-md-10 heading-section text-center ftco-animate">
-          	<h1 class="big big-2">Resume</h1>
-            <h2 class="mb-4">Resume</h2>
-            <p>“Leveraging over 11 years of experience in Project Management/Test Management to excel as a Data Analyst, with a focus on Public Financial Management Systems, Banking Financial Services and Capital Markets. 
-				Eager to apply extensive expertise in data analysis, reporting, and strategic insights to drive impactful decision-making and enhance operational efficiency.”</p>
-          </div>
-        </div>
-
-		<div class="row">
-			<h1 class="big-4">Experience</h1>
-			<div class="underline"></div>
-		</div>
-		<br>
-		
-		<div class="row">
-				<div class="col-md-6">
-					<div class="resume-wrap ftco-animate">
-						<span class="date">2019-2023</span>
-						<h2>Test Lead</h2>
-						<span class="position">Tata Consultancy Serivces</span>
-						<p class="mt-4">TCS, a global leader in IT services, consulting, and business solutions, leverages technology for business transformation and helps catalyze change. 
-							<ul>
-								<li>Developed and executed project goals, including business plans and action plans, while focusing on product strategy aligned with customer
-									and business needs.</li>
-								<li>Led a complex project, guiding the development team to enhance product development and acceptance test criteria, achieving 99% ontime
-									delivery.</li>
-								<!-- <li>Designed and executed A/B tests, performed rigorous statistical analysis. Led to 20% MoM increase in the conversion rate.</li> -->
-							</ul>
-						</p>
-					</div>
-
-				</div>
-
-				<div class="col-md-6">
-					<div class="resume-wrap ftco-animate">
-						<span class="date">2016-2019</span>
-						<h2>Module Lead</h2>
-						<span class="position">Tata Consultancy Serivces</span>
-						<!-- <p span class="mt-4">PROJECT - PFMS(Public Finance Management System)</span> -->
-						<!-- <h5>PROJECT - PFMS(Public Finance Management System)</h5> -->
-						<p class="mt-4">TCS, a global leader in IT services, consulting, and business solutions, leverages technology for business transformation and helps catalyze change. 
-							<ul>
-								<li>Identified key customer pain points and recommended new functionalities to enhance business value, converting these into
-									actionable user stories in JIRA.</li>
-								<!-- <li>Demonstrated expertise in database querying and data manipulation using SQL in MSSQL.</li> -->
-								<li>Updated and maintained SQL scripts and test cases in response to changes in applications and business rules, and identified areas for improvement.</li>
-							</ul>
-						</p>
-					</div>
-
-				</div>
-			</div>
-
-		<br>
-		<br>
-
-		<div class="row">
-			<h1 class="big-4">Education</h1>
-			<div class="underline"></div>
-		</div>
-		<br>
-		
-			<div class="row">
-    			<div class="col-md-6">
-    				<div class="resume-wrap ftco-animate">
-    					<span class="date">2007-2011</span>
-    					<h2>Bachelor of Technology</h2>
-    					<span class="position">IET Lucknow, Uttar Pradesh</span>
-    					<p class="mt-4">Grade: First class distinction.</p>
-    				</div>
-    			</div>
-
-    			<div class="col-md-6">
-    				<div class="resume-wrap ftco-animate">
-    					<span class="date">2005-2006</span>
-    					<h2>Higher Secondary School</h2>
-    					<span class="position">St. Joseph School</span>
-    					<p class="mt-4">Grade: First class distinction.</p>
-    				</div>
-				</div>
-    		</div>
-
-    		<div class="row justify-content-center mt-5">
-    			<div class="col-md-6 text-center ftco-animate">
-    				<!-- <p><a href="#" class="btn btn-primary py-4 px-5">Download CV</a></p> -->
-    			</div>
-    		</div>
-    	</div>
-    </section>
-
-   
-
-    <section class="ftco-section" id="project-section">
-      <div class="container">
-        <div class="row justify-content-center mb-5 pb-5">
-          <div class="col-md-7 heading-section text-center ftco-animate">
-            <h1 class="big big-2">Projects</h1>
-            <h2 class="mb-4">Projects</h2>
-            <p>Below are the sample Data Analytics projects on Power BI, SQL & Python.</p>
-          </div>
-        </div>
-        <div class="row d-flex">
-			<div class="col-md-4 d-flex ftco-animate">
-				<div class="blog-entry">
-				<a href="https://github.com/ratneshsatyarthi/Credit_Card_Analysis" class="block-20 zoom-effect" style="background-image: url('images/Credit_transaction1.gif');">
-				</a>
-				<div class="text mt-3 float-right d-block">
+  <!-- mobile responsive meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-				  <h3 class="heading"><a href="https://github.com/ratneshsatyarthi/Credit_Card_Analysis">Power BI Sales dashboard Project for Beginners</a></h3>
-				  <p>Designed a Power BI dashboard for Credit Card and analyze the transaction and customer data.</p>
-				</div>
-			  </div>
-			</div>
+  <!-- ** Plugins Needed for the Project ** -->
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="plugins/bootstrap/bootstrap.min.css">
+  <!-- slick slider -->
+  <link rel="stylesheet" href="plugins/slick/slick.css">
+  <!-- themefy-icon -->
+  <link rel="stylesheet" href="plugins/themify-icons/themify-icons.css">
 
-          <div class="col-md-4 d-flex ftco-animate">
-          	<div class="blog-entry justify-content-end">
-              <a href="https://github.com/ratneshsatyarthi/SQL_Project_Music_Store_Analysis" class="block-20 zoom-effect" style="background-image: url('images/proj_1.jpg');">
-              </a>
-              <div class="text mt-3 float-right d-block">
+  <!-- Main Stylesheet -->
+  <link href="css/style.css" rel="stylesheet">
+  
+  <!--Favicon-->
+  <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
 
-                <h3 class="heading"><a href="https://github.com/ratneshsatyarthi/SQL_Project_Music_Store_Analysis">Digital Music Store Data Analysis using SQL</a></h3>
-                <p>Analyzed music store data using advanced SQL queires to identify gaps and increase the business growth.</p>
-              </div>
-            </div>
-          </div>
+</head>
 
-          <!-- <div class="col-md-4 d-flex ftco-animate">
-          	<div class="blog-entry justify-content-end">
-              <a href="#" class="block-20 zoom-effect" style="background-image: url('images/proj_2.jpg');">
-              </a>
-              <div class="text mt-3 float-right d-block">
+<body>
+  
 
-                <h3 class="heading"><a href="#">Data Analysis using Python Project for Beginners</a></h3>
-                <p>Performed exploratory data analysis on diwali sales data using Python to improve the customer experience.</p>
-              </div>
-            </div>
-          </div> -->
-		  <div class="col-md-4 d-flex ftco-animate">
-			<div class="blog-entry justify-content-end">
-			<a href="rhttps://pythonmlstockpricepredictor-tvkc4y5aaurx2dzyhhprvq.streamlit.app/" class="block-20 zoom-effect" style="background-image: url('images/proj_4.jpg');">
+<header class="navigation fixed-top">
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <a class="navbar-brand font-tertiary h3" href="index.html"><img src="images/logo.png" alt="Myself"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation"
+      aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse text-center" id="navigation">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="about.html">about</a>
+        </li>
+        <!--<li class="nav-item">
+          <a class="nav-link" href="blog.html">Blog</a>
+        </li>-->
+        <li class="nav-item">
+          <a class="nav-link" href="portfolio.html">Portfolio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contact.html">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>
+
+<!-- hero area -->
+<section class="hero-area bg-primary" id="parallax">
+<!--
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-11 mx-auto">
+        <h1 class="text-white font-tertiary">
+			Hi! I'm <br> 
+			Ratnesh Satyarthi <br> 
+			<span style="font-size: 0.7em;">Data Scientist</span>
+		</h1>
+      </div>
+    </div>
+  </div> 
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-11 mx-auto">
+        <h1 class="text-white font-tertiary">
+			Hi! I'm <br> 
+			Ratnesh Satyarthi <br> 
+			<span class="gradient-scale">Data Scientist</span><br>
+			<span class="typewriter-text">Data Analyst</span>
+		</h1>
+      </div>
+    </div>
+  </div> -->
+  
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-11 mx-auto">
+        <h1 class="text-white font-tertiary">
+			Hi! I'm <br> 
+			Ratnesh Satyarthi <br> 
+			<span class="gradient-scale">Data Analyst</span> <br>
+			<span class="typewriter-wrapper">
+				<span class="typewriter-text">Aspiring Data Scientist</span>
+				<span class="cursor"></span>
+			</span>
+		</h1>
+		
+		<!-- Social Links with High Visibility -->
+		<div class="social-links-section">
+			<a href="https://drive.google.com/file/d/1g1CPZwSaL8UHbvCNAixP2BxL9LVwKgYq/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn-link btn-resume">
+				RESUME
+			</a>			
+			<a href="https://github.com/ratneshsatyarthi" target="_blank" rel="noopener noreferrer" class="btn-link btn-github">
+				GITHUB
 			</a>
-			<div class="text mt-3 float-right d-block">
-
-			  <h3 class="heading"><a href="https://github.com/ratneshsatyarthi/Python_ML_Stock_Price_Predictor/tree/main">Stock Price Predictor App</a></h3>
-			  <p>Used machine learning models to Predict Stock price and display on web application built using Streamlit.</p>
-			</div>
-		  </div>
-          
-        </div>
-	<br>
-		<!-- added justify-content-center to center align the last two projects -->
-		<!-- <div class="row d-flex justify-content-center">  
-			<div class="col-md-4 d-flex ftco-animate">
-				<div class="blog-entry justify-content-end">
-				<a href="https://github.com/rishabhnmishra/sales_forecasting/tree/main" class="block-20 zoom-effect" style="background-image: url('images/proj_4.jpg');">
-				</a>
-				<div class="text mt-3 float-right d-block">
-  
-				  <h3 class="heading"><a href="https://github.com/rishabhnmishra/sales_forecasting/tree/main">Sales Forecast- Time Series Forecasting</a></h3>
-				  <p>Used multiple machine learning models to forecast sales (retail store) and performed time series analysis.</p>
-				</div>
-			  </div>
-			</div>
-			<div class="col-md-4 d-flex ftco-animate">
-				<div class="blog-entry justify-content-end">
-				<a href="https://github.com/rishabhnmishra/customer_segmentation/blob/main/Customer_Segmentation-final.ipynb" class="block-20 zoom-effect" style="background-image: url('images/proj_5.jpg');">
-				</a>
-				<div class="text mt-3 float-right d-block">
-  
-				  <h3 class="heading"><a href="https://github.com/rishabhnmishra/customer_segmentation/blob/main/Customer_Segmentation-final.ipynb">Customer Segmentation using clustering model</a></h3>
-				  <p>Developed a ML model to give various recommendations of financial products &amp; services on target customer groups.</p>
-				</div>
-			  </div>
-			</div>
-		 </div> -->
-	  </div>
-    </section>
-
-	<!-- <section class="ftco-section ftco-no-pt ftco-no-pb ftco-counter img" id="section-counter">
-      <div class="container">
-		<div class="row d-md-flex align-items-center">
-          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
-            <div class="block-18">
-              <div class="text">
-                <strong class="number" data-number="20">0</strong>
-                <span>Achievements</span>
-              </div>
-            </div>
-          </div>
-          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
-            <div class="block-18">
-              <div class="text">
-                <strong class="number" data-number="30">0</strong>
-                <span>Projects</span>
-              </div>
-            </div>
-          </div>
-          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
-            <div class="block-18">
-              <div class="text">
-                <strong class="number" data-number="1000">0</strong>
-                <span>Mentored Students</span>
-              </div>
-            </div>
-          </div>
-          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
-            <div class="block-18">
-              <div class="text">
-                <strong class="number" data-number="500">0</strong>
-                <span>Cups of coffee</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div> -->
-	
-	  <div class="ftco-section ftco-hireme img margin-top" style="background-image: url(images/bg_1.jpg)">
-			<!-- <div class="container"> -->
-				<div class="row justify-content-center">
-					<div class="col-md-7 ftco-animate text-center">
-						<h2>More projects on<span> Github  </span> </h2>
-						<div class="heading"> <h4> I love to solve business problems &amp; uncover hidden data stories </h4>
-						<br>
-						<p><a href="https://github.com/ratneshsatyarthi" class="btn btn-primary py-3 px-5">GitHub</a></p>
-						</div>
-					</div>
-				</div>
-			<!-- </div> -->
+			<a href="https://www.linkedin.com/in/ratnesh-satyarthi-1332b447/" target="_blank" rel="noopener noreferrer" class="btn-link btn-linkedin">
+				LINKEDIN
+			</a>
 		</div>
-	</section>
-
-
-
-    <section class="ftco-section contact-section ftco-no-pb" id="contact-section">
-      <div class="container">
-      	<div class="row justify-content-center mb-5 pb-3">
-          <div class="col-md-7 heading-section text-center ftco-animate">
-            <h1 class="big big-2">Contact</h1>
-            <h2 class="mb-4">Contact Me</h2>
-            <p>Below are the details to reach out to me!</p>
-          </div>
-        </div>
-
-        <div class="row d-flex contact-info mb-5">
-          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
-          	<div class="align-self-stretch box p-4 text-center">
-          		<div class="icon d-flex align-items-center justify-content-center">
-          			<span class="icon-map-signs"></span>
-          		</div>
-          		<h3 class="mb-4">Address</h3>
-	            <p>New Delhi, India</p>
-	          </div>
-          </div>
-          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
-          	<div class="align-self-stretch box p-4 text-center">
-          		<div class="icon d-flex align-items-center justify-content-center">
-          			<span class="icon-phone2"></span>
-          		</div>
-          		<h3 class="mb-4">Contact Number</h3>
-	            <p><a href="tel://0101010101">+ 91-9871033949</a></p>
-	          </div>
-          </div>
-          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
-          	<div class="align-self-stretch box p-4 text-center">
-          		<div class="icon d-flex align-items-center justify-content-center">
-          			<span class="icon-paper-plane"></span>
-          		</div>
-          		<h3 class="mb-4">Email Address</h3>
-	            <p><a href="mailto:info@yoursite.com">ratnes.satyarthi25@gmail.com</a></p>
-	          </div>
-          </div>
-		  
-          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
-          	<div class="align-self-stretch box p-4 text-center">
-          		<div class="icon d-flex align-items-center justify-content-center">
-          			<span class="icon-globe"></span>
-          		</div>
-          		<h3 class="mb-4">Download Resume</h3>
-	            <p><a href="https://drive.google.com/file/d/1XUP9F4CsjZi34kPIxuXaPbky_oyCDwwS/view?usp=drive_link">resumelink</a></p>
-	          </div>
-          </div>
-
-		  <!-- <div class="container">
-			<br>
-			<br>
-			<div class="row justify-content-center">
-				<div class="col-md-7 ftco-animate text-center">
-					<h2>Have a<span> Question?  </span> <a href="https://forms.gle/uLaTShUKXraAvHJ77" class="btn btn-primary py-3 px-5">Click Here</a> </h2>
-				</div>
-			</div>
-				<br>
-					<ul class="ftco-footer-social list-unstyled d-flex justify-content-center align-items-center mb-0">
-					  <li class="ftco-animate normal-txt">Connect me on  </li> -->
-					  <!-- <li class="ftco-animate"><a href="https://www.youtube.com/@RishabhMishraOfficial"><span class="icon-youtube"></span></a></li> -->
-					  <!-- <li class="ftco-animate"><a href="https://www.linkedin.com/in/ratnesh-satyarthi-1332b447/"><span class="icon-linkedin"></span></a></li>   -->
-					  <!-- <li class="ftco-animate"><a href="https://twitter.com/rishabhnmishra"><span class="icon-twitter"></span></a></li>
-					  <li class="ftco-animate"><a href="https://twitter.com/rishabhnmishra"><span class="icon-facebook"></span></a></li>
-				      <li class="ftco-animate"><a href="https://www.instagram.com/rishabhnmishra/"><span class="icon-instagram"></span></a></li> -->
-					</ul>
-				<br>
-		   </div>
-   </div>
- </section>
-
-
+      </div>
+    </div>
+</div>
  
-	
-    <footer class="ftco-footer ftco-section">
-		<div class="container">
-		  <div class="row">
-			<div class="col-md-12 text-center">
-  
-			  <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-	Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart color-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-	<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+
+  <div class="layer-bg w-100">
+    <img class="img-fluid w-100" src="images/illustrations/leaf-bg.png" alt="bg-shape">
+  </div>
+  <div class="layer" id="l2">
+    <img src="images/illustrations/dots-cyan.png" alt="bg-shape">
+  </div>
+  <div class="layer" id="l3">
+    <img src="images/illustrations/leaf-orange.png" alt="bg-shape">
+  </div>
+  <div class="layer" id="l4">
+    <img src="images/illustrations/dots-orange.png" alt="bg-shape">
+  </div>
+  <div class="layer" id="l5">
+    <img src="images/illustrations/leaf-yellow.png" alt="bg-shape">
+  </div>
+  <div class="layer" id="l6">
+    <img src="images/illustrations/leaf-cyan.png" alt="bg-shape">
+  </div>
+  <div class="layer" id="l7">
+    <img src="images/illustrations/dots-group-orange.png" alt="bg-shape">
+  </div>
+  <div class="layer" id="l8">
+    <img src="images/illustrations/leaf-pink-round.png" alt="bg-shape">
+  </div>
+  <div class="layer" id="l9">
+    <img src="images/illustrations/leaf-cyan-2.png" alt="bg-shape">
+  </div>
+  <!-- social icon 
+  <ul class="list-unstyled ml-5 mt-3 position-relative zindex-1">
+    <li class="mb-3"><a class="text-white" href="#"><i class="ti-facebook"></i></a></li>
+    <li class="mb-3"><a class="text-white" href="#"><i class="ti-instagram"></i></a></li>
+    <li class="mb-3"><a class="text-white" href="#"><i class="ti-dribbble"></i></a></li>
+    <li class="mb-3"><a class="text-white" href="#"><i class="ti-twitter"></i></a></li>
+  </ul>
+   /social icon -->
+</section>
+<!-- /hero area -->
+
+<!-- about -->
+<section class="section">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-10 mx-auto text-center">
+	  
+		<!--Option 4: Modern Highlight Box Format -->
+				
+        <div class="modern-profile" style="font-family: 'Roboto', sans-serif;">			
+			<div style="background: #41228e; color: white; padding: 2rem; border-radius: 15px; margin-bottom: 2rem;">
+				<h4 style="font-family: 'Montserrat', sans-serif; font-weight: 700; margin-bottom: 1rem; text-align: 
+				center; font-size: 2.2rem; letter-spacing: -0.02em; color: white;">Data Analyst & ML Enthusiast</h4>
+				<p style="font-size: 1.1rem; line-height: 1.8; text-align: center; margin: 0; opacity: 0.95; color: white;">
+					Transforming complex data into actionable insights through advanced analytics, Machine learning & Generative AI.
+				</p>
+			</div>
+    
+		<!--<div class="skills-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem;">
+			<div style="background: #f8f9fa; padding: 1.5rem; border-radius: 10px; border-top: 4px solid #007bff;">
+				<h6 style="color: #007bff; font-family: 'Montserrat', sans-serif; font-size: 1.2rem; font-weight: 600; margin-bottom: 1rem;">🎯 Core Expertise</h6>
+				<ul style="list-style: none; padding: 0; margin: 0;">
+					<li style="margin-bottom: 0.5rem;">• Regression,</li>
+					<li style="margin-bottom: 0.5rem;">• Classification & clustering</li>
+					<li style="margin-bottom: 0.5rem;">• Time series forecasting</li>
+					<li style="margin-bottom: 0.5rem;">• Ensemble Learning</li>
+					<li style="margin-bottom: 0.5rem;">• Convolutional Neural Networks (CNN)</li>
+					<li>• Exploratory Data Analysis (EDA)</li>
+				</ul>
+			</div>
+        
+        <div style="background: #f8f9fa; padding: 1.5rem; border-radius: 10px; border-top: 4px solid #28a745;">
+            <h6 style="color: #28a745; font-family: 'Montserrat', sans-serif; font-size: 1.2rem; font-weight: 600; margin-bottom: 1rem;">💻 Technical Stack</h6>
+            <ul style="list-style: none; padding: 0; margin: 0;">
+				<li style="margin-bottom: 0.5rem;">• Machine Learning</li>
+				<li style="margin-bottom: 0.5rem;">• Deep Learning</li>
+                <li style="margin-bottom: 0.5rem;">• Generative AI</li>
+                <li style="margin-bottom: 0.5rem;">• Power BI & Tableau</li>
+            </ul>
+        </div>
+        
+        <div style="background: #f8f9fa; padding: 1.5rem; border-radius: 10px; border-top: 4px solid #ffc107;">
+            <h6 style="color: #e69500; font-family: 'Montserrat', sans-serif; font-size: 1.2rem; font-weight: 600; margin-bottom: 1rem;">📈 Background</h6>
+            <p style="margin: 0; line-height: 1.6;">
+                12+ years IT experience in Public Finance & Banking, now focused on data-driven solutions through ML and DL
+            </p>
+        </div>
+		</div>
+		</div>-->
+		
+				
+		<!--Option 2: Card-Based Layout-->
+		<!--<div class="profile-cards" style="font-family: 'Inter', sans-serif;">
+		<div class="row">
+			<div class="col-md-6 mb-3">
+				<div class="skill-card" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 1.5rem; border-radius: 10px;">
+					<h6 style="font-weight: 600; margin-bottom: 0.8rem;">🎯 Core Specialization</h6>
+					<p style="font-size: 0.95rem; line-height: 1.6; margin: 0;">
+						Data Analysis & Machine Learning with hands-on expertise in predictive modeling, classification, clustering, and time series forecasting
+					</p>
+				</div>
+			</div>
+        
+        <div class="col-md-6 mb-3">
+            <div class="skill-card" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); color: white; padding: 1.5rem; border-radius: 10px;">
+                <h6 style="font-weight: 600; margin-bottom: 0.8rem;">⚡ Technical Arsenal</h6>
+                <p style="font-size: 0.95rem; line-height: 1.6; margin: 0;">
+                    Proficient in Python, SQL, Power BI, and Tableau with practical experience in end-to-end ML solutions
+                </p>
+            </div>
+        </div>
+        
+        <div class="col-12">
+            <div class="experience-highlight" style="background: #f8f9fa; border-left: 4px solid #007bff; padding: 1.5rem; margin-top: 1rem;">
+                <p style="font-size: 1rem; line-height: 1.7; margin: 0; color: #495057;">
+                    <strong>Career Transition:</strong> Leveraging 12+ years of IT domain expertise (Public Finance & Banking) 
+                    to deliver data-driven solutions and intelligent automation in modern analytics landscape
+                </p>
+            </div>
+        </div>
+		</div>
+		</div>-->
+		
+		<div class="profile-content" style="font-family: 'Open Sans', sans-serif; line-height: 1.8; color: #34495e;">
+        
+        <ul class="key-skills" style="list-style: none; padding: 0;">
+            <li style="margin-bottom: 0.8rem;">
+               <span style="color: #3498db; font-weight: 600;">🔍 Core Expertise:</span>
+				Regression, Classification (SVM, Random Forest), Clustering (K-Means, DBSCAN), Time Series Forecasting (ARIMA, SARIMAX), 
+        Ensemble Learning (XGBoost, SMOTE), Deep Learning (CNNs, Transfer Learning), Exploratory Data Analysis (EDA), Model Evaluation (ROC-AUC, F1-score).
+            </li>
+            <li style="margin-bottom: 0.8rem;">
+                <span style="color: #e74c3c; font-weight: 600;">💻 Technical Skills:</span> 
+                Python (Pandas, Scikit-learn, TensorFlow), SQL (PostgreSQL, MSSQL), Power BI, Tableau, 
+        Matplotlib, Seaborn, Plotly, Google Cloud, Streamlit, Flask, Git.
+            </li>
+            <li style="margin-bottom: 0.8rem;">
+                <span style="color: #27ae60; font-weight: 600;">🚀 End-to-End Solutions:</span> 
+                Data preprocessing, Feature engineering, Model training (ML & DL), Deployment (Flask, Streamlit, Cloud), 
+        Automated ETL pipelines, Interactive dashboards, KPI monitoring.
+            </li>
+            <li style="margin-bottom: 0.8rem;">
+                <span style="color: #f39c12; font-weight: 600;">📈 Background:</span> 
+                13+ years IT experience (PFMS-Public Finance & BFS-Banking & Finance) into TCS and Grant Thornton and now transitioning to data-focused career through ML and DL.
+				Certified: Cloud Digital Leader, BI & Financial Markets
+            </li>
+        </ul>
+		</div>
+
+		<!-- skills -->
+		<section class="section">
+		  <div class="container">
+			<div class="row">
+			  <div class="col-lg-12 text-center">
+				<h2 class="section-title">Skills</h2>
+			  </div>
+			  <div class="col-lg-3 col-sm-6 mb-4 mb-lg-0">
+				<div class="card shadow text-center">
+				  <div class="position-relative rounded-top progress-wrapper" data-color="#fdb157">
+					<div class="wave" data-progress="80%"></div>
+				  </div>
+				  <div class="card-footer bg-white">
+					<h4 class="card-title">Machine Learning </h4>
+				  </div>
+				</div>
+			  </div>
+			  <div class="col-lg-3 col-sm-6 mb-4 mb-lg-0">
+				<div class="card shadow text-center">
+				  <div class="position-relative rounded-top progress-wrapper" data-color="#9473e6">
+					<div class="wave" data-progress="70%"></div>
+				  </div>
+				  <div class="card-footer bg-white">
+					<h4 class="card-title">Deep Learning </h4>
+				  </div>
+				</div>
+			  </div>
+			  <div class="col-lg-3 col-sm-6 mb-4 mb-lg-0">
+				<div class="card shadow text-center">
+				  <div class="position-relative rounded-top progress-wrapper" data-color="#bdecf6">
+					<div class="wave" data-progress="60%"></div>
+				  </div>
+				  <div class="card-footer bg-white">
+					<h4 class="card-title">Generative AI </h4>
+				  </div>
+				</div>
+			  </div>
+			  <div class="col-lg-3 col-sm-6 mb-4 mb-lg-0">
+				<div class="card shadow text-center">
+				  <div class="position-relative rounded-top progress-wrapper" data-color="#ffbcaa">
+					<div class="wave" data-progress="90%"></div>
+				  </div>
+				  <div class="card-footer bg-white">
+					<h4 class="card-title">Power BI </h4>
+				  </div>
+				</div>
+			  </div>
+			  <div class="col-lg-3 col-sm-6 mb-4 mb-lg-0">
+				<div class="card shadow text-center">
+				  <div class="position-relative rounded-top progress-wrapper" data-color="#aac3ff">
+					<div class="wave" data-progress="75%"></div>
+				  </div>
+				  <div class="card-footer bg-white">
+					<h4 class="card-title">Tableau </h4>
+				  </div>
+				</div>
+			  </div>
+			  <div class="col-lg-3 col-sm-6 mb-4 mb-lg-0">
+				<div class="card shadow text-center">
+				  <div class="position-relative rounded-top progress-wrapper" data-color="#ffaac3">
+					<div class="wave" data-progress="60%"></div>
+				  </div>
+				  <div class="card-footer bg-white">
+					<h4 class="card-title">Python </h4>
+				  </div>
+				</div>
+			  </div>
+			  <div class="col-lg-3 col-sm-6 mb-4 mb-lg-0">
+				<div class="card shadow text-center">
+				  <div class="position-relative rounded-top progress-wrapper" data-color="#ffe7aa">
+					<div class="wave" data-progress="50%"></div>
+				  </div>
+				  <div class="card-footer bg-white">
+					<h4 class="card-title">Excel </h4>
+				  </div>
+				</div>
+			  </div>
+			  <div class="col-lg-3 col-sm-6 mb-4 mb-lg-0">
+				<div class="card shadow text-center">
+				  <div class="position-relative rounded-top progress-wrapper" data-color="#e8aaff">
+					<div class="wave" data-progress="80%"></div>
+				  </div>
+				  <div class="card-footer bg-white">
+					<h4 class="card-title">SQL </h4>
+				  </div>
+				</div>
+			  </div>
 			</div>
 		  </div>
+		</section>
+		<!-- /skills -->
+
+<!--Option 1: Structured Bullet Points with Keywords-->
+		<!-- Increased spacing before Project Experience section -->
+		<div class="row" style="margin-top: 3rem;">
+			<div class="col-lg-12 text-center">
+				<h2 class="section-title">Project Experience</h2>
+			</div>
 		</div>
-	  </footer>
+		<div class="about-section">
+		<div class="about-section">
+		<h5 class="section-title" style="font-size: 1.5rem; font-family: 'Montserrat', sans-serif; font-weight: 600; 
+		color: #2c3e50; margin-bottom: 1rem;">ML / DL Projects</h5>
+		
+		<div class="col-12">
+            <div class="experience-highlight" style="background: #f8f9fa; border-left: 4px solid #007bff; padding: 1.5rem; margin-top: 1rem; text-align: left;">
+				<p style="font-size: 1rem; line-height: 1.7; margin: 0 0 1.2rem 0; color: #495057;">
+				  <span style="font-weight: 700; font-size: 1.12rem; color: #2c3e50;">
+					Skin Cancer Image Classification
+				  </span>
+				  <a href="https://github.com/ratneshsatyarthi/DL_Skin_Cancer_Image_Classification" target="_blank" style="margin-left: 10px; font-weight: 600; color: #1976d2; text-decoration: underline;">
+					[GitHub]
+				  </a>
+				  : Built and trained a Convolutional Neural Network (CNN) model for 
+				  classifying skin lesions as benign or malignant; achieved high accuracy through data augmentation, dropout regularization, 
+				  and evaluation with confusion matrix and classification report.
+				</p>
+
+				<p style="font-size: 1rem; line-height: 1.7; margin: 0 0 1.2rem 0; color: #495057;">
+				  <span style="font-weight: 700; font-size: 1.12rem; color: #2c3e50;">
+					Bank Fraud Detection & Transaction Analysis
+				  </span>
+				  <a href="https://github.com/ratneshsatyarthi/ML_Unsupervised_Bank_Transaction_Fraud_Detection" target="_blank" style="margin-left: 10px; font-weight: 600; color: #1976d2; text-decoration: underline;">[GitHub]</a>
+				  : Developed a fraud detection model combining DBSCAN clustering for anomaly detection with Random Forest classification, reducing false positives and enabling real-time fraud labeling.
+				</p>
+
+				<p style="font-size: 1rem; line-height: 1.7; margin: 0 0 1.2rem 0; color: #495057;">
+				  <span style="font-weight: 700; font-size: 1.12rem; color: #2c3e50;">
+					House & Insurance Price Prediction
+				  </span>
+				  <a href="https://github.com/ratneshsatyarthi/ML_House_Price_Prediction" target="_blank" style="margin-left: 10px; font-weight: 600; color: #1976d2; text-decoration: underline;">[GitHub]</a>
+				  : Created predictive models with feature selection and regularization techniques, achieving strong R² scores and reduced MAE/RMSE for accurate pricing.
+				</p>
+
+				<p style="font-size: 1rem; line-height: 1.7; margin: 0 0 1.2rem 0; color: #495057;">
+				  <span style="font-weight: 700; font-size: 1.12rem; color: #2c3e50;">
+					Loan Eligibility & Diabetes Prediction
+				  </span>
+				  <a href="https://github.com/ratneshsatyarthi/ML_Diabetes_Prediction" target="_blank" style="margin-left: 10px; font-weight: 600; color: #1976d2; text-decoration: underline;">[GitHub]</a>
+				  : Implemented classification models to automate predictions for loan approval and diabetes detection, optimizing evaluation with ROC-AUC and F1-score.
+				</p>
+
+				<p style="font-size: 1rem; line-height: 1.7; margin: 0 0 1.2rem 0; color: #495057;">
+				  <span style="font-weight: 700; font-size: 1.12rem; color: #2c3e50;">
+					Customer Churn Prediction
+				  </span>
+				  <a href="" target="_blank" style="margin-left: 10px; font-weight: 600; color: #1976d2; text-decoration: underline;">[GitHub]</a>
+				  : Designed churn prediction models on imbalanced datasets using SMOTE, improving recall and AUC for telecom customer retention analysis.
+				</p>
+
+				<p style="font-size: 1rem; line-height: 1.7; margin: 0 0 1.2rem 0; color: #495057;">
+				  <span style="font-weight: 700; font-size: 1.12rem; color: #2c3e50;">
+					Customer Segmentation
+				  </span>
+				  <a href="" target="_blank" style="margin-left: 10px; font-weight: 600; color: #1976d2; text-decoration: underline;">[GitHub]</a>
+				  : Performed customer segmentation using K-Means, identifying high-value clusters to support targeted marketing strategies.
+				</p>
+
+				<p style="font-size: 1rem; line-height: 1.7; margin: 0; color: #495057;">
+				  <span style="font-weight: 700; font-size: 1.12rem; color: #2c3e50;">
+					Time Series Forecasting
+				  </span>
+				  <a href="https://github.com/ratneshsatyarthi/ML_StockPrice_Prediction" target="_blank" style="margin-left: 10px; font-weight: 600; color: #1976d2; text-decoration: underline;">[GitHub]</a>
+				  : Built forecasting models for airline passenger traffic and stock prices; applied decomposition and seasonal modeling to enhance predictive accuracy.
+				</p>
+
+			</div>
+		</div>	
+		
+		<h5 class="section-title" style="font-size: 1.5rem; font-family: 'Montserrat', sans-serif; font-weight: 600; 
+		color: #2c3e50; margin-bottom: 1rem; margin-top: 1.5em;">Power BI, Tableau & Excel Projects</h5>
+		
+		<div class="col-12">
+            <div class="experience-highlight" style="background: #f8f9fa; border-left: 4px solid #007bff; padding: 1.5rem; margin-top: 1rem; text-align: left;">
+				<p style="font-size: 1rem; line-height: 1.7; margin: 0 0 1.2rem 0; color: #495057;">
+				  <span style="font-weight: 700; font-size: 1.12rem; color: #2c3e50;">
+					Hospital Emergency Room Dashboard (Power BI)
+				  </span>
+				  <a href="https://github.com/ratneshsatyarthi/Power_BI_Hospital_ER_Dashboard" target="_blank" style="margin-left: 10px; font-weight: 600; color: #1976d2; text-decoration: underline;">[GitHub]</a>
+				  : Designed a dashboard analyzing 9,216 patient records over 19 months; tracked KPIs like wait times, satisfaction scores, demographics, and referrals to optimize resource allocation.
+				</p>
+
+				<p style="font-size: 1rem; line-height: 1.7; margin: 0 0 1.2rem 0; color: #495057;">
+				  <span style="font-weight: 700; font-size: 1.12rem; color: #2c3e50;">
+					Credit Card Financial Dashboard (Power BI)
+				  </span>
+				  <a href="https://github.com/ratneshsatyarthi/Credit_Card_Analysis" target="_blank" style="margin-left: 10px; font-weight: 600; color: #1976d2; text-decoration: underline;">[GitHub]</a>
+				  : Developed an interactive financial dashboard integrating transaction and customer data to monitor KPIs, identify spending trends, and provide real-time insights.
+				</p>
+
+				<p style="font-size: 1rem; line-height: 1.7; margin: 0 0 1.2rem 0; color: #495057;">
+				  <span style="font-weight: 700; font-size: 1.12rem; color: #2c3e50;">
+					Bike Sales Analysis Dashboard (Tableau)
+				  </span>
+				  <a href="https://public.tableau.com/app/profile/ratnesh.satyarthi/viz/BikeSalesAnalysisDashboard_17372405733900/BikeSalesDashboard" target="_blank" style="margin-left: 10px; font-weight: 600; color: #1976d2; text-decoration: underline;">[GitHub]</a>
+				  : Created a Tableau dashboard to analyze sales across regions, age groups, and income levels; visualized customer purchasing behavior to support marketing and sales strategy decisions.
+				</p>
+
+				<p style="font-size: 1rem; line-height: 1.7; margin: 0; color: #495057;">
+				  <span style="font-weight: 700; font-size: 1.12rem; color: #2c3e50;">
+					Sales Dashboard Analysis (Excel)
+				  </span>
+				  <a href="https://github.com/ratneshsatyarthi/Excel_Ferns_and_Petals_Sales_Analysis" target="_blank" style="margin-left: 10px; font-weight: 600; color: #1976d2; text-decoration: underline;">[GitHub]</a>
+				  : Built an Excel dashboard tracking total revenue, top cities, top customers, order vs delivery performance, and monthly sales trends; provided insights on seasonal demand and product performance.
+				</p>
+				
+			</div>
+		</div>
+		
+		<h5 class="section-title" style="font-size: 1.5rem; font-family: 'Montserrat', sans-serif; font-weight: 600; 
+		color: #2c3e50; margin-bottom: 1rem; margin-top: 1.5em;">SQL & Analytics Projects</h5>
+		
+		<div class="col-12">
+            <div class="experience-highlight" style="background: #f8f9fa; border-left: 4px solid #007bff; padding: 1.5rem; margin-top: 1rem; text-align: left;">
+				<p style="font-size: 1rem; line-height: 1.7; margin: 0 0 1.2rem 0; color: #495057;">
+				  <span style="font-weight: 700; font-size: 1.12rem; color: #2c3e50;">
+					Pizza Sales Data Analysis (PostgreSQL)
+				  </span>
+				  <a href="https://github.com/ratneshsatyarthi/SQL_Pizza_Sales_Analysis" target="_blank" style="margin-left: 10px; font-weight: 600; color: #1976d2; text-decoration: underline;">[GitHub]</a>
+				  : Conducted comprehensive sales analysis using SQL queries to extract and aggregate pizza sales data; identified revenue trends, peak order hours, best-selling products, and seasonal variations. Recommended pricing and promotional strategies to optimize sales and customer engagement.
+				</p>
+
+				<p style="font-size: 1rem; line-height: 1.7; margin: 0 0 1.2rem 0; color: #495057;">
+				  <span style="font-weight: 700; font-size: 1.12rem; color: #2c3e50;">
+					Music Store Analytics (SQL)
+				  </span>
+				  <a href="https://github.com/ratneshsatyarthi/SQL_Project_Music_Store_Analysis" target="_blank" style="margin-left: 10px; font-weight: 600; color: #1976d2; text-decoration: underline;">[GitHub]</a>
+				  : Optimized SQL queries with JOINs, CTEs, and recursive logic to analyze customer behavior, top-selling genres, and revenue patterns, reducing reporting time by 20–30%.
+				</p>
+								
+			</div>
+		</div>
+		
+		</div>
+
+        <a href="about.html" class="btn btn-transparent">know more</a>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- /about -->
 
 
-  <!-- loader -->
-  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+<!-- experience -->
+<section class="section">
+  <div class="container">
+    <div class="row justify-content-around">
+      <div class="col-lg-12 text-center">
+        <h2 class="section-title">Work Experience</h2>
+      </div>
+	  <div class="col-lg-4 col-md-6 text-center">
+		<img src="images/experience/icon-1.png" alt="icon">
+		<p class="mb-0 fs-5">Sep 2011 - Jul 2023</p>
+		<h4 class="fs-3 fw-bold" style="font-size: 2.3rem; font-family: 'Georgia', serif; white-space: nowrap;">Assistant Consultant</h4>
+		<h5 style="font-family: 'Georgia', serif; white-space: nowrap;">TCS (Tata Consultancy Services)</h5>
+	  </div>
+	  <div class="col-lg-4 col-md-6 text-center">
+		<img src="images/experience/icon-2.png" alt="icon">
+		<p class="mb-0 fs-5">Oct 2024 - Present</p>		
+		<h4 class="fs-3 fw-bold" style="font-size: 2.3rem; font-family: 'Georgia', serif;">Consultant</h4>
+		<h5 style="font-family: 'Georgia', serif;">Grant Thornton Bharat LLP</h5>
+	  </div>
+      <!--<div class="col-lg-3 col-md-4 text-center">
+        <img src="images/experience/icon-1.png" alt="icon">
+        <p class="mb-0">Sep 2011 - Jul 2023</p>
+        <h4>Assitant Consultant</h4>
+        <h5 class="text-light">TCS</h5>
+      </div>
+      <div class="col-lg-3 col-md-4 text-center">
+        <img src="images/experience/icon-2.png" alt="icon">
+        <p class="mb-0">Oct 2024 - Present</p>
+        <h4>Consultant</h4>
+        <h6 class="text-light">Grant Thornton Bharat LLP</h6>
+      </div>
+      <div class="col-lg-3 col-md-4 text-center">
+        <img src="images/experience/icon-3.png" alt="icon">
+        <p class="mb-0">Sep 2014 - Present</p>
+        <h4>Senior UI Designer</h4>
+        <h6 class="text-light">THEMEFISHER</h6>
+      </div>-->
+    </div>
+  </div>
+</section>
+<!-- ./experience -->
 
+<!-- education -->
+<section class="section position-relative">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <h2 class="section-title">Education</h2>
+      </div>
+      <div class="col-lg-6 col-md-6 mb-80">
+        <div class="d-flex">
+          <div class="mr-lg-5 mr-3">
+            <i class="ti-medall icon icon-light icon-bg bg-white shadow rounded-circle d-block"></i>
+          </div>
+          <div>
+            <p class="text-dark mb-1">2011</p>
+			<h4 class="fs-3 fw-bold" style="font-size: 2.3rem; font-family: 'Georgia', serif;">B.Tech</h4>
+			<h5 style="font-family: 'Georgia', serif;">Institute of Engineering and Technology, LUCKNOW</h5>
+          </div>
+        </div>
+      </div>
+      <!--<div class="col-lg-6 col-md-6 mb-80">
+        <div class="d-flex">
+          <div class="mr-lg-5 mr-3">
+            <i class="ti-medall icon icon-light icon-bg bg-white shadow rounded-circle d-block"></i>
+          </div>
+          <div>
+            <p class="text-dark mb-1">2004</p>
+            <h4>Honours in Fine Arts</h4>
+            <p class="mb-0 text-light">Harvard University</p>
+          </div>
+        </div>
+      </div>-->
+      <div class="col-lg-6 col-md-6 mb-80">
+        <div class="d-flex">
+          <div class="mr-lg-5 mr-3">
+            <i class="ti-medall icon icon-light icon-bg bg-white shadow rounded-circle d-block"></i>
+          </div>
+          <div>
+            <p class="text-dark mb-1">2006</p>
+			<h4 class="fs-3 fw-bold" style="font-size: 2.3rem; font-family: 'Georgia', serif; white-space: nowrap;">Higher Secondary School</h4>            
+            <h5 style="font-family: 'Georgia', serif;">St. Joseph School, ShaktiNagar</h5>
+			<!-- Elegant and Readable -->
+			<!-- <h5 class="mb-0 text-light" style="font-family: 'Open Sans', sans-serif; font-weight: 600;">St. Joseph School, ShaktiNagar</h5>-->
 
-  <script src="js/jquery.min.js"></script>
-  <script src="js/jquery-migrate-3.0.1.min.js"></script>
-  <script src="js/popper.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/jquery.easing.1.3.js"></script>
-  <script src="js/jquery.waypoints.min.js"></script>
-  <script src="js/jquery.stellar.min.js"></script>
-  <script src="js/owl.carousel.min.js"></script>
-  <script src="js/jquery.magnific-popup.min.js"></script>
-  <script src="js/aos.js"></script>
-  <script src="js/jquery.animateNumber.min.js"></script>
-  <script src="js/scrollax.min.js"></script>
-  
-  <script src="js/main.js"></script>
-    
-  </body>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6 col-md-6 mb-80">
+        <div class="d-flex">
+          <div class="mr-lg-5 mr-3">
+            <i class="ti-medall icon icon-light icon-bg bg-white shadow rounded-circle d-block"></i>
+          </div>
+          <div>
+            <p class="text-dark mb-1">2004</p>
+			<h4 class="fs-3 fw-bold" style="font-size: 2.3rem; font-family: 'Georgia', serif; white-space: nowrap;">Secondary School</h4>            
+            <h5 style="font-family: 'Georgia', serif;">St. Joseph School, ShaktiNagar</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- bg image -->
+  <img class="img-fluid edu-bg-image w-100" src="images/backgrounds/education-bg.png" alt="bg-image">
+</section>
+<!-- /education -->
+
+<!-- services 
+<section class="section">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 text-center">
+        <h2 class="section-title">Services</h2>
+      </div>
+      <div class="col-md-4 mb-4 mb-md-0">
+        <div class="card hover-shadow shadow">
+          <div class="card-body text-center px-4 py-5">
+            <i class="ti-palette icon mb-5 d-inline-block"></i>
+            <h4 class="mb-4">UI Design</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+              dolore magna aliqua.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4 mb-md-0">
+        <div class="card active-bg-primary hover-shadow shadow">
+          <div class="card-body text-center px-4 py-5">
+            <i class="ti-vector icon mb-5 d-inline-block"></i>
+            <h4 class="mb-4">UX Design</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+              dolore magna aliqua.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4 mb-md-0">
+        <div class="card hover-shadow shadow">
+          <div class="card-body text-center px-4 py-5">
+            <i class="ti-panel icon mb-5 d-inline-block"></i>
+            <h4 class="mb-4">Interaction Design</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+              dolore magna aliqua.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+ /services -->
+
+<!-- portfolio -->
+<section class="section">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 text-center">
+        <h2 class="section-title">Portfolio</h2>
+      </div>
+    </div>
+    <div class="row shuffle-wrapper">
+      <div class="col-lg-4 col-6 mb-4 shuffle-item">
+        <div class="position-relative rounded hover-wrapper">
+          <img src="images/portfolio/item-1.png" alt="portfolio-image" class="img-fluid rounded w-100">
+          <div class="hover-overlay">
+            <div class="hover-content">
+              <a class="btn btn-light btn-sm" href="https://huggingface.co/spaces/rksatyarthi/pdfSummarizer">view project</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-6 mb-4 shuffle-item">
+        <div class="position-relative rounded hover-wrapper">
+          <img src="images/portfolio/item-2.png" alt="portfolio-image" class="img-fluid rounded w-100">
+          <div class="hover-overlay">
+            <div class="hover-content">
+              <a class="btn btn-light btn-sm" href="https://github.com/ratneshsatyarthi/DL_Skin_Cancer_Image_Classification">view project</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-6 mb-4 shuffle-item">
+        <div class="position-relative rounded hover-wrapper">
+          <img src="images/portfolio/item-3.png" alt="portfolio-image" class="img-fluid rounded w-100">
+          <div class="hover-overlay">
+            <div class="hover-content">
+              <a class="btn btn-light btn-sm" href="https://github.com/ratneshsatyarthi/Python_EDA_LinkedInJobPostings">view project</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-6 mb-4 shuffle-item">
+        <div class="position-relative rounded hover-wrapper">
+          <img src="images/portfolio/item-4.png" alt="portfolio-image" class="img-fluid rounded w-100">
+          <div class="hover-overlay">
+            <div class="hover-content">
+              <a class="btn btn-light btn-sm" href="https://github.com/ratneshsatyarthi/ML_Unsupervised_Bank_Transaction_Fraud_Detection">view project</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-6 mb-4 shuffle-item">
+        <div class="position-relative rounded hover-wrapper">
+          <img src="images/portfolio/item-5.png" alt="portfolio-image" class="img-fluid rounded w-100">
+          <div class="hover-overlay">
+            <div class="hover-content">
+              <a class="btn btn-light btn-sm" href="https://github.com/ratneshsatyarthi/ML_Diabetes_Prediction">view project</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- /portfolio -->
+
+<!-- testimonial -->
+<section class="section bg-primary position-relative testimonial-bg-shapes">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 text-center">
+        <h2 class="section-title text-white mb-5">Cetificates & Awards</h2>
+      </div>
+      <div class="col-lg-10 mx-auto testimonial-slider">
+        <!-- slider-item -->
+        <div class="text-center testimonial-content">
+          <i class="ti-quote-right text-white icon mb-4 d-inline-block"></i>
+          <h3 class="text-white">Appreciation from Jt CGA Ministry of Finance</h3>
+          <h4 class="text-white">(PFMS - Public Finance Management Sysytem)</h4>
+        </div>
+        <!-- slider-item -->
+        <div class="text-center testimonial-content">
+          <i class="ti-quote-right text-white icon mb-4 d-inline-block"></i> 
+          <h3 class="text-white">Certified in Applied Business Intelligence - Power BI</h3>
+          <h4 class="text-white">(PwC, Edureka)</h4>
+        </div>
+        <!-- slider-item -->
+        <div class="text-center testimonial-content">
+          <i class="ti-quote-right text-white icon mb-4 d-inline-block"></i> 
+          <h3 class="text-white">Financial Markets Beginner Module</h3>
+          <h4 class="text-white">NCFM, NSE Academy</h4>
+        </div>
+		<!-- slider-item -->
+        <div class="text-center testimonial-content">
+          <i class="ti-quote-right text-white icon mb-4 d-inline-block"></i> 
+          <h3 class="text-white">Cloud Digital Leader</h3>
+          <h4 class="text-white">Google</h4>
+        </div>
+      </div>
+    </div>
+  </div>
+   <!--bg shapes -->
+  <img src="images/backgrounds/map.png" alt="map" class="img-fluid bg-map">
+  <img src="images/illustrations/dots-group-v.png" alt="bg-shape" class="img-fluid bg-shape-1">
+  <img src="images/illustrations/leaf-orange.png" alt="bg-shape" class="img-fluid bg-shape-2">
+  <img src="images/illustrations/dots-group-sm.png" alt="bg-shape" class="img-fluid bg-shape-3">
+  <img src="images/illustrations/leaf-pink-round.png" alt="bg-shape" class="img-fluid bg-shape-4">
+  <img src="images/illustrations/leaf-cyan.png" alt="bg-shape" class="img-fluid bg-shape-5">
+</section>
+ <!-- testimonial -->
+
+<!-- client logo slider 
+<section class="section pb-0">
+  <div class="container">
+    <div class="client-logo-slider d-flex align-items-center">
+      <a href="#" class="text-center d-block outline-0 p-4"><img class="d-unset img-fluid"
+          src="images/clients-logo/client-logo-1.png" alt="client-logo"></a>
+      <a href="#" class="text-center d-block outline-0 p-4"><img class="d-unset img-fluid"
+          src="images/clients-logo/client-logo-2.png" alt="client-logo"></a>
+      <a href="#" class="text-center d-block outline-0 p-4"><img class="d-unset img-fluid"
+          src="images/clients-logo/client-logo-3.png" alt="client-logo"></a>
+      <a href="#" class="text-center d-block outline-0 p-4"><img class="d-unset img-fluid"
+          src="images/clients-logo/client-logo-4.png" alt="client-logo"></a>
+      <a href="#" class="text-center d-block outline-0 p-4"><img class="d-unset img-fluid"
+          src="images/clients-logo/client-logo-5.png" alt="client-logo"></a>
+      <a href="#" class="text-center d-block outline-0 p-4"><img class="d-unset img-fluid"
+          src="images/clients-logo/client-logo-1.png" alt="client-logo"></a>
+      <a href="#" class="text-center d-block outline-0 p-4"><img class="d-unset img-fluid"
+          src="images/clients-logo/client-logo-2.png" alt="client-logo"></a>
+      <a href="#" class="text-center d-block outline-0 p-4"><img class="d-unset img-fluid"
+          src="images/clients-logo/client-logo-3.png" alt="client-logo"></a>
+      <a href="#" class="text-center d-block outline-0 p-4"><img class="d-unset img-fluid"
+          src="images/clients-logo/client-logo-4.png" alt="client-logo"></a>
+      <a href="#" class="text-center d-block outline-0 p-4"><img class="d-unset img-fluid"
+          src="images/clients-logo/client-logo-5.png" alt="client-logo"></a>
+    </div>
+  </div>
+</section>
+ /client logo slider -->
+
+<!-- blog 
+<section class="section">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 text-center">
+        <h2 class="section-title">Blogs</h2>
+      </div>
+      <div class="col-lg-4 col-sm-6 mb-4 mb-lg-0">
+        <article class="card shadow">
+          <img class="rounded card-img-top" src="images/blog/post-3.jpg" alt="post-thumb">
+          <div class="card-body">
+            <h4 class="card-title"><a class="text-dark" href="blog-single.html">Amazon increase income 1.5 Million</a>
+            </h4>
+            <p class="cars-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+              incididunt ut labore et
+              dolore magna aliqua.</p>
+            <a href="blog-single.html" class="btn btn-xs btn-primary">Read More</a>
+          </div>
+        </article>
+      </div>
+      <div class="col-lg-4 col-sm-6 mb-4 mb-lg-0">
+        <article class="card shadow">
+          <img class="rounded card-img-top" src="images/blog/post-4.jpg" alt="post-thumb">
+          <div class="card-body">
+            <h4 class="card-title"><a class="text-dark" href="blog-single.html">Amazon increase income 1.5 Million</a>
+            </h4>
+            <p class="cars-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+              incididunt ut labore et
+              dolore magna aliqua.</p>
+            <a href="blog-single.html" class="btn btn-xs btn-primary">Read More</a>
+          </div>
+        </article>
+      </div>
+      <div class="col-lg-4 col-sm-6 mb-4 mb-lg-0">
+        <article class="card shadow">
+          <img class="rounded card-img-top" src="images/blog/post-2.jpg" alt="post-thumb">
+          <div class="card-body">
+            <h4 class="card-title"><a class="text-dark" href="blog-single.html">Amazon increase income 1.5 Million</a>
+            </h4>
+            <p class="cars-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+              incididunt ut labore et
+              dolore magna aliqua.</p>
+            <a href="blog-single.html" class="btn btn-xs btn-primary">Read More</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+ /blog -->
+
+<!-- contact -->
+<section class="section section-on-footer" data-background="images/backgrounds/bg-dots.png">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 text-center">
+        <h2 class="section-title">Contact Info</h2>
+      </div>
+      <div class="col-lg-8 mx-auto">
+        <div class="bg-white rounded text-center p-5 shadow-down">
+          <h4 class="mb-80">Contact Form</h4>
+          <form action="#" class="row">
+            <div class="col-md-6">
+              <input type="text" id="name" name="name" placeholder="Full Name" class="form-control px-0 mb-4">
+            </div>
+            <div class="col-md-6">
+              <input type="email" id="email" name="email" placeholder="Email Address" class="form-control px-0 mb-4">
+            </div>
+            <div class="col-12">
+              <textarea name="message" id="message" class="form-control px-0 mb-4"
+                placeholder="Type Message Here"></textarea>
+            </div>
+            <div class="col-lg-6 col-10 mx-auto">
+              <button class="btn btn-primary w-100">send</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- /contact -->
+
+<!-- footer -->
+<footer class="bg-dark footer-section">
+  <div class="section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <h5 class="text-light">Email</h5>
+          <p class="text-white paragraph-lg font-secondary">ratnesh.satyarthi25@gmail.com.com</p>
+        </div>
+        <div class="col-md-4">
+          <h5 class="text-light">Phone</h5>
+          <p class="text-white paragraph-lg font-secondary">+91-9871033949</p>
+        </div>
+        <div class="col-md-4">
+          <h5 class="text-light">Address</h5>
+          <p class="text-white paragraph-lg font-secondary">New Delhi, India</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="border-top text-center border-dark py-5">
+    <p class="mb-0 text-light">Copyright ©<script>
+        var CurrentYear = new Date().getFullYear()
+        document.write(CurrentYear)
+      </script> a theme by <a href="themefisher.com">Ratnesh Satyarthi</a></p>
+  </div>
+</footer>
+<!-- /footer -->
+
+<!-- jQuery -->
+<script src="plugins/jQuery/jquery.min.js"></script>
+<!-- Bootstrap JS -->
+<script src="plugins/bootstrap/bootstrap.min.js"></script>
+<!-- slick slider -->
+<script src="plugins/slick/slick.min.js"></script>
+<!-- filter -->
+<script src="plugins/shuffle/shuffle.min.js"></script>
+
+<!-- Main Script -->
+<script src="js/script.js"></script>
+
+</body>
 </html>
